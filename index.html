@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GPS x-fade</title>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.js"></script>
+    <style media="screen">
+      body {
+        width: 320px;
+        background-color: #eee;
+        text-align: center;
+      }
+      body > * {
+        visibility: hidden;
+      }
+      body.ready > * {
+        visibility: visible;
+      }
+      button {
+        margin-top: 60%;
+        font-size: 32px;
+        border: none;
+        background: black;
+        border-radius: 5px;
+        color: #eee;
+        padding: 0.2em 0.5em;
+      }
+      button.hide {
+        opacity: 0;
+        transition: opacity 1s;
+        pointer-events: none;
+      }
+      #timestamp {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="begin" type="button" name="button" onclick="init()">Begin</button>
+    <div id="timestamp"></div>
+    <audio id="audio-a" src="./audio/gps-xfade-A.mp3"></audio>
+    <audio id="audio-b" src="./audio/gps-xfade-B.mp3"></audio>
+    <script type="text/javascript" src="./app.js"></script>
+  </body>
+</html>
